@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="image-carousel">
+        <div class="carousel-container">
+            <img src="img\1.png" alt="Image 1" class="carousel-image active">
+            <img src="img\2.png" alt="Image 2" class="carousel-image">
+            <img src="img\3.png" alt="Image 3" class="carousel-image">
+        </div>
+        <div class="buttons-container">
+            <button class="prev-button" onclick="prevImage()">上一张</button>
+            <button class="next-button" onclick="nextImage()">下一张</button>
+        </div>
+        <div class="bottom-buttons-container">
+            <button class="bottom-button" onclick="showImage(0)">1</button>
+            <button class="bottom-button" onclick="showImage(1)">2</button>
+            <button class="bottom-button" onclick="showImage(2)">3</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+</html>
