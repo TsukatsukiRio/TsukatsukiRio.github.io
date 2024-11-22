@@ -53,3 +53,29 @@
   cursor: pointer;
   margin-right: 5px;
 }
+
+
+
+<script>
+  window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var section1 = document.getElementById('section1');
+    var section2 = document.getElementById('section2');
+    var section3 = document.getElementById('section3');
+    var section4 = document.getElementById('section4');
+    var section5 = document.getElementById('section5');
+    var threshold1 = section1.offsetTop;
+    var threshold2 = section2.offsetTop;
+    var threshold3 = section3.offsetTop;
+    var threshold4 = section4.offsetTop;
+    var threshold5 = section5.offsetTop;
+
+    if (window.scrollY >= threshold1 && window.scrollY < threshold2) {
+      a1.backgroundColor='#0000ff'; // 滚动到section1时变为红色
+    } else if (window.scrollY >= threshold2&& window.scrollY < threshold3) {
+      section.style.backgroundColor = '#0000ff'; // 滚动到section2时变为蓝色
+    } else {
+      section.style.backgroundColor = '#ffffff'; // 恢复初始颜色
+    }
+  });
+</script>

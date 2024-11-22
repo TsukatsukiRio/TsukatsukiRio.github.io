@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; /* 让页面滚动具有平滑的动画效果 */
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +18,7 @@ ul {
 
 body {
   background: #fff;
+  scroll-behavior: smooth; /* 让页面滚动具有平滑的动画效果 */
 }
 
 .header {
@@ -22,6 +26,7 @@ body {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ddd;
+  position: fixed;
 }
 
 #nav {
@@ -44,6 +49,10 @@ body {
 
 #nav li {
   padding-left: 40px;
+  place-content: center;
+  text-align: center;
+
+  
 }
 
 .on {
@@ -112,12 +121,21 @@ body {
 .jingli {
   width: 900px;
   margin: auto;
-  background-color: rgb(173, 160, 87);
-  height: 50px;
+  background-color:#303643;
+  color:#ffffff;
+  height: 70px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   margin-top: 50px;
+  letter-spacing: 8px;
+  font-family: 宋体;
+  place-content: center;
+}
+.jingli:hover{
+  transform: scale(1.5);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 .big-box1 {
@@ -153,10 +171,10 @@ body {
   background: url(../img/3.png);
 }
 .box2 p{
-  line-height: 40px;
+  line-height:40px;
   font-size: 20px;
-  padding-left: 10px;
-  
+  padding: 10px;
+  text-align: justify;
 }
 
 
@@ -194,10 +212,11 @@ body {
   
 }
 .box-1,.box-2,.box-3{
-  line-height: 40px;
+  line-height: 35px;
   font-size: 20px;
-  padding-left: 10px
-
+  padding: 10px;
+  text-align: justify;
+  
 }
 .box-1{
   background: url(../img/4.png)center center;
@@ -210,9 +229,6 @@ body {
 .box-3 {
   background: url(../img/8.png)center center;
 }
-
-.skill-box {}
-
 .tit {
   display: flex;
   justify-content: space-between;
@@ -249,7 +265,7 @@ body {
   height: 7px;
   left: 0;
   top: 0;
-  background: lightblue;
+  background: linear-gradient(200deg,#e7f0fd,#accbee);
 }
 
 .foot-box {
@@ -297,30 +313,36 @@ display: flex;
   text-align: center;
   color: aqua;
 }
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 400px;
-  width: 150px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  box-sizing: border - box;
+section{
+  margin-bottom: 50px;
 }
+.sidebar {
+  position: fixed;/*固定*/
+  left: 20px;
+  top: 30%;
+  background-color: #f2f2f2;
+  padding: 22px;
+  margin: 20px;
+  box-sizing: border-box;
+  line-height: 8px;
+  border-radius: 10%;
+  place-content: center;
+  text-align: center;
+}
+
+
 /* 边栏中的链接样式 */
 .sidebar a {
   display: block;
   text-decoration: none;
   color: #333;
-  padding: 10px 0;
+  padding: 15px 0;
+  font-size: 18px;
 }
 .sidebar a:hover {
   color: #000;
   background-color: #ddd;
-}
-.sidebar{
-  top:100px;
-  width: 110px;
+  border-radius: 10px;
 }
 footer {
   background-color: #333;
@@ -348,4 +370,27 @@ footer ul li a:hover {
 }
 footer{
   margin-top: 400px;
+}
+#section1{
+  position: relative;
+  top: -50px;
+}
+#section2,#section3,#section4{
+  position: relative;
+  top:-100px;
+}
+#icon {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background: #dcdcdc;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: -50px;
+  right: 20px;
+  color: #fff;
+  font-weight: bolder;
+  transition: bottom 0.5s ease;
+  border-radius: 50%;
 }
