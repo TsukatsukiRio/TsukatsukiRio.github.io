@@ -1,29 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <style>
-    #target-section {
-      position: relative;
-      top: -50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Back to Top Example</title>
+    <!-- 引入 jQuery 库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入 jQuery easing 插件，用于实现更丰富的缓动效果 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easing/1.4.1/jquery.easing.min.js"></script>
+    <style>
+        /* 简单样式，让 #backToTop 元素看起来像个按钮，可按需调整 */
+        #backToTop {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background: #1111;
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            bottom: -50px;
+            right: 20px;
+            font-weight: bolder;
+            transition: 0.5s ease;
+            border-radius: 50%;
+        }
+
+        div {
+            height: 1000px;
+        }
+    </style>
 </head>
+
 <body>
-  <a href="#target-section">点击跳转到目标位置并向上移动50px</a>
-  <div style="height: 500px;">页面上方的一些内容，用于占据空间以便查看滚动效果</div>
-  <br>
-  <br> <br> <br> <br> <br> <br> <br> <br>
-  <br> <br> <br> <br> <br> <br> <br> <br> 
-  <br> <br> <br> <br> <br> <br> <br> <br>
-  <br> <br> <br> <br> <br> <br> <br> <br>
-  <br> <br> <br> <br> <br> <br> <br> <br>
-  <div id="target-section">
-    <h2>这是目标位置的标题</h2>
-    <p>这是目标位置的一些文本内容。</p>
-    <br> <br> <br> <br> <br> <br> <br> <br>
-    <br> <br> <br> <br> <br> <br> <br> <br>
-    <br> <br> <br> <br> <br> <br> <br> <br>
-    <br> <br> <br> <br> <br> <br> <br> <br>
-  </div>
+    <!-- 这里添加很多内容，模拟长页面 -->
+    <p>这里是一些页面内容，可以不断重复添加段落等让页面变长......</p>
+    <div></div>
+    <button id=backToTop">回到顶部</button>
+    <script>
+        $(window).on('scroll', function () {
+            var t = $(window).scrollTop();
+            if (t >= 300) {
+                $('#backToTop').css('display', 'block');
+                if (t >= 200) {
+                    $('#backToTop').css('bottom', '70px');
+                } else {
+                    $('#backToTop').css('bottom', '-50px');
+                }
+            } else {
+                $('#backToTop').css('display', 'none');
+            }
+        });
+
+        $('#backToTop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, {
+                duration: 800, // 动画总时长，可根据需求调整
+
+            });
+        });
+    </script>
 </body>
+
 </html>

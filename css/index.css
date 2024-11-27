@@ -1,6 +1,8 @@
 html {
-  scroll-behavior: smooth; /* 让页面滚动具有平滑的动画效果 */
+  scroll-behavior: smooth;
+  /* 让页面滚动具有平滑的动画效果 */
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,8 @@ ul {
 
 body {
   background: #fff;
-  scroll-behavior: smooth; /* 让页面滚动具有平滑的动画效果 */
+  scroll-behavior: smooth;
+  /* 让页面滚动具有平滑的动画效果 */
 }
 
 .header {
@@ -27,6 +30,13 @@ body {
   background: #fff;
   border-bottom: 1px solid #ddd;
   position: fixed;
+}
+
+.we {
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 #nav {
@@ -52,7 +62,7 @@ body {
   place-content: center;
   text-align: center;
 
-  
+
 }
 
 .on {
@@ -121,8 +131,8 @@ body {
 .jingli {
   width: 900px;
   margin: auto;
-  background-color:#303643;
-  color:#ffffff;
+  background-color: #303643;
+  color: #ffffff;
   height: 70px;
   text-align: center;
   font-size: 40px;
@@ -131,11 +141,6 @@ body {
   letter-spacing: 8px;
   font-family: 宋体;
   place-content: center;
-}
-.jingli:hover{
-  transform: scale(1.5);
-  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-  z-index: 1;
 }
 
 .big-box1 {
@@ -154,14 +159,16 @@ body {
 }
 
 
-.box1 ul{
+.box1 ul {
   margin-top: 40px;
 }
-.box1 li{
+
+.box1 li {
   line-height: 60px;
   font-size: 25px;
   padding-left: 20px;
 }
+
 .box2 {
   width: 600px;
   height: 460px;
@@ -170,8 +177,9 @@ body {
   padding-top: 40px;
   background: url(../img/3.png);
 }
-.box2 p{
-  line-height:40px;
+
+.box2 p {
+  line-height: 40px;
   font-size: 20px;
   padding: 10px;
   text-align: justify;
@@ -201,34 +209,73 @@ body {
   width: 500px;
   border: #ddd solid 1px;
   margin: 10px;
-
+  border-radius: 10px;
 }
-.box-1 h1,.box-2 h1,.box-3 h1{
+
+.box-1,
+.box-2,
+.box-3,
+.box2,
+.box1 {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+}
+
+.box-1:hover,
+.box-2:hover,
+.box-3:hover,
+.box2:hover,
+.box1:hover {
+  background-size: 120% 120%;
+}
+
+.box-1 h1,
+.box-2 h1,
+.box-3 h1 {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   margin-top: 50px;
   font-family: 宋体;
-  
+
 }
-.box-1,.box-2,.box-3{
+
+.box-1,
+.box-2,
+.box-3 {
   line-height: 35px;
   font-size: 20px;
   padding: 10px;
   text-align: justify;
-  
+
 }
-.box-1{
-  background: url(../img/4.png)center center;
+
+.box-1 {
+  background: url(../img/4.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
 }
 
 .box-2 {
-  background: url(../img/5.png)center center;
+  background: url(../img/5.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
 }
 
 .box-3 {
-  background: url(../img/8.png)center center;
+  background: url(../img/8.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
 }
+
 .tit {
   display: flex;
   justify-content: space-between;
@@ -265,7 +312,7 @@ body {
   height: 7px;
   left: 0;
   top: 0;
-  background: linear-gradient(200deg,#e7f0fd,#accbee);
+  background: linear-gradient(200deg, #e7f0fd, #accbee);
 }
 
 .foot-box {
@@ -285,39 +332,50 @@ body {
   height: 50px;
   justify-content: space-between;
 }
-.cp{
-margin: auto;
-width: 1200px;
-height:200px;
 
-display: flex;
+.cp {
+  margin: auto;
+  width: 1200px;
+  height: 200px;
+
+  display: flex;
 }
-.cp1,.cp2,.cp3{
+
+.cp1,
+.cp2,
+.cp3 {
   margin: 50px;
   margin-bottom: 10px;
   width: 300px;
   height: 300px;
   border: #333 solid 1px;
 }
-.cp1{
+
+.cp1 {
   background: url(../img/lh.png) no-repeat center center;
 }
-.cp2{
+
+.cp2 {
   background: url(../img/77.png) no-repeat center center;
 }
-.cp3{
+
+.cp3 {
   background: url(../img/66.png) no-repeat center center;
 }
-.ziti{
+
+.ziti {
   font-size: 20px;
   text-align: center;
   color: aqua;
 }
-section{
+
+section {
   margin-bottom: 50px;
 }
+
 .sidebar {
-  position: fixed;/*固定*/
+  position: fixed;
+  /*固定*/
   left: 20px;
   top: 30%;
   background-color: #f2f2f2;
@@ -335,51 +393,71 @@ section{
 .sidebar a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #000;
   padding: 15px 0;
   font-size: 18px;
 }
+
 .sidebar a:hover {
   color: #000;
   background-color: #ddd;
   border-radius: 10px;
 }
+
+.sidebar a.active {
+  color: #000;
+  background-color: #999;
+  border-radius: 10px;
+}
+
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
 }
+
 footer p {
   margin: 0;
 }
+
 footer ul {
   list-style-type: none;
   padding: 0;
   margin: 10px 0 0 0;
 }
+
 footer ul li {
   display: inline-block;
   margin-right: 15px;
 }
+
 footer ul li a {
   color: #fff;
   text-decoration: none;
 }
+
 footer ul li a:hover {
   text-decoration: underline;
 }
-footer{
+
+footer {
   margin-top: 400px;
 }
-#section1{
+
+#section1 {
   position: relative;
   top: -50px;
 }
-#section2,#section3,#section4{
+
+#section2,
+#section3,
+#section4 {
   position: relative;
-  top:-100px;
+  top: -100px;
 }
-#icon {
+
+#backToTop {
   width: 50px;
   height: 50px;
   font-size: 20px;
@@ -391,6 +469,81 @@ footer{
   right: 20px;
   color: #fff;
   font-weight: bolder;
-  transition: bottom 0.5s ease;
+  transition: 0.5s ease;
   border-radius: 50%;
+}
+
+/* 适配显示器大小 */
+@media screen and (max-width:1199px) {
+  body {
+    min-width: 100%;
+  }
+
+  .nav-box {
+    width: 100%;
+  }
+
+  .banner {
+    width: 100%;
+    height: 120px;
+    line-height: 112px;
+    font-size: 16px;
+
+  }
+
+  .nav-box span {
+    display: none;
+  }
+
+  .introduce {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+  }
+
+  .introduce img {
+    width: 120px;
+  }
+
+  .big-box1,
+  .bigbox-2,
+  .box-1,
+  .box-2,
+  .box-3 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .cp {
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+}
+
+/* 针对类名为wbg的元素设置样式 */
+.wbg {
+  display: inline-block;
+  width: 100px;
+  /* 你可以根据实际需求调整这个宽度，来让文字更好地对齐 */
+  text-align: right;
+  margin-right: 10px;
+  /* 设置合适的间距，可按需调整 */
+}
+
+/* 针对类名为blg的元素设置样式 */
+.blg {
+  display: inline-block;
+  text-align: left;
+  color: #999;
+}
+
+#jj {
+  letter-spacing: 23px;
 }
