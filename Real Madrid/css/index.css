@@ -1,0 +1,915 @@
+html {
+  scroll-behavior: smooth;
+  background: white;
+}
+
+#loge {
+  margin-left: 150px;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+#imageBox {
+  width: 70%;
+  height: 650px;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+#imageBox:nth-child(1) {
+  opacity: 1;
+}
+
+#imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.box-left {
+  position: absolute;
+  width: 35px;
+  height: 70px;
+  top: 272px;
+  border-radius: 0 5px 5px 0;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+}
+
+.box-left:hover {
+  background-color: #00000050;
+  color: #fff;
+}
+
+.box-right {
+  position: absolute;
+  width: 35px;
+  height: 70px;
+  top: 272px;
+  border-radius: 0 5px 5px 0;
+  text-align: center;
+  line-height: 70px;
+  font-size: 27px;
+  right: 0;
+}
+
+.box-right:hover {
+  background-color: #00000050;
+  color: #fff;
+}
+
+.box-zhiding>ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.box-zhiding li {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #ccc;
+  float: left;
+  margin-right: 10px;
+}
+
+.box-zhiding li:hover {
+  background-color: #fff;
+}
+
+.box-zhiding {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+}
+
+.zjbs,
+.qyjs {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  display: flex;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.zjbs h3,
+.qyjs h3 {
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+#left-box {
+  width: 200px;
+  height: 50px;
+  background-color: lightgray;
+}
+
+.black-box {
+  width: 50px;
+  height: 30px;
+  background-color: black;
+  margin: 10px;
+  float: left;
+}
+
+#right-box {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  margin-left: 20px;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+/* 新增以下样式 */
+.bigbox {
+  display: flex;
+  margin-top: 10px;
+  /* 根据需要调整这个外边距 */
+  position: relative;
+}
+  .bigbox {
+    display: flex;
+    margin-top: 10px;
+    /* 根据需要调整这个外边距 */
+    position: relative;
+    width: 90%; /* 这里假设设置一个合适的宽度，你可以根据实际需求调整 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  /* 让 box1 和 box2 上下排列 */
+  width: 30%;
+  margin-left: 150px;
+}
+
+.dw1,
+.dw3,
+.dw5,
+.dw7 {
+  left: 20px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  /* background-color: #000; */
+  text-align: center;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dw2,
+.dw4,
+.dw6,
+.dw8 {
+  right: 20px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mbp {
+  background-color: darkgray;
+  width: 100%;
+}
+
+.box1 h1,
+.box2 h1,
+.box4 h1,
+.box5 h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.box1,
+.box2,
+.box4,
+.box5 {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  background-color: darkgray;
+  border-radius: 40px;
+  position: relative;
+  display: flex;
+}
+
+/* 新增以下样式 */
+.dw1::after {
+  content: "亚特兰大";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw3::after {
+  content: "赫罗纳";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw5::after {
+  content: "毕尔巴";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw2::after {
+  content: "皇家马德里";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw4::after {
+  content: "皇家马德里";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw7::after {
+  content: "皇家马德里";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw6::after {
+  content: "皇家马德里";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dw8::after {
+  content: "巴萨";
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.qdpm {
+  height: 845px;
+  width: 42%;
+  background: darkgray;
+  margin-left: 120px;
+  border-radius: 40px;
+  position: relative;
+
+}
+
+.qdpm li {
+  line-height: 150x;
+}
+
+.qdpm h3 {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.mvp {
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  position: absolute;
+  border-radius: 0 0 40px 40px;
+}
+
+.mvp img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  object-fit: cover;
+  border-radius: 0 0 40px 40px;
+}
+
+.dropdown {
+  margin-top: 100px;
+}
+
+.we {
+  letter-spacing: 2px;
+  display: flex;
+  position: relative;
+}
+
+.fk {
+  width: 40%;
+  background-color: darkgray;
+  margin-top: 10px;
+  height: 800px;
+  margin-left: 150px;
+  border-radius: 40px;
+  overflow: auto;
+}
+.llll{
+  width: 100%;
+}
+/* .one{
+  width: 40%;
+  height: 10px;
+} */
+.fk table tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  /* 可以设置表头背景色确保覆盖下方滚动内容时视觉效果好 */
+}
+
+.fk table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 2px auto;
+  overflow-y: auto;
+}
+
+.fk th,
+td {
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
+.mxqy {
+  height: 800px;
+  background: darkgray;
+  width: 35%;
+  margin-top: 10px;
+  margin-left: 80px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.js {
+  position: absolute;
+  width: 100%;
+  border-radius: 0 0 40px 40px;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+  padding: 2px;
+}
+
+.js h3 {
+  margin-left: 50px;
+  letter-spacing: 2px;
+}
+
+.js p {
+  letter-spacing: 2px;
+  text-align: justify;
+  padding: 20px;
+  font-size: 14px;
+    max-height: 21em; /* 根据文本行高大致估算 11 行文本的高度，这里假设行高约为 1em，可根据实际情况调整 */
+    line-height: 1.2; /* 设置行高，可根据实际字体和设计需求调整 */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 19;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: box;
+    box-orient: vertical;
+  }
+
+
+.inner-box2 {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.box3 {
+  height: 500px;
+  width: 46%;
+  background: url(../img/LSRY.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-left: 150px;
+  position: relative;
+}
+
+.history {
+  width: 100%;
+  /* background-color: #00000050; */
+  position: absolute;
+  border-radius: 0 0 40px 40px;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.history:hover {
+  opacity: 1;
+  background-color: #00000050;
+  color: #fff;
+}
+
+.history h2 {
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.history p {
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.mrt {
+  height: 500px;
+  width: 28px;
+  background: darkgray;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-right: 200px;
+  position: relative;
+}
+
+.lp h3 {
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.lp p {
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.lsqx {
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.qdpm table {
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  right: 0;
+
+}
+
+.qdpm th,
+td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+  height: 50px;
+}
+
+th {
+  background-color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #444;
+}
+
+tr:nth-child(odd) {
+  background-color: #333;
+}
+.clll{
+  width: 100%;
+  height:520px;
+  object-fit: contain;
+  margin-top: 200px;
+}
+.clll img{ 
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+/* } */
+#mrt {
+  background: darkgray;
+  ;
+  width: 30%;
+  height: 500px;
+  position: relative;
+  border-radius: 40px;
+  top: 20px;
+  margin-left: 65px;
+
+}
+
+#mrt.box {
+  display: none;
+  /* 先隐藏所有的.box元素 */
+}
+
+#mrt.box:first-child {
+  display: block;
+  /* 让#mrt下的第一个.box元素显示 */
+}
+
+.lsqx {
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  position: absolute;
+}
+
+#box1 {
+  display: block;
+}
+
+button {
+  position: absolute;
+  bottom: 10px;
+}
+
+#prevButton {
+  left: 10px;
+}
+
+#nextButton {
+  right: 10px;
+}
+
+.zp {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.www{
+  width: 100%;
+  height: 300px;
+}
+.blem{
+  width: 100%;
+  height: 430px;
+}
+.blem img{
+  height: 100%;
+  width: 100%;
+  
+  object-fit: cover;
+  border-radius: 40px 40px 0 0;
+}
+button {
+  position: absolute;
+  bottom: 10px;
+  width: 40px;
+  /* 设置按钮宽度 */
+  height: 40px;
+  /* 设置按钮高度 */
+  line-height: 40px;
+  /* 让按钮内文字垂直居中 */
+  text-align: center;
+  font-size: 20px;
+  /* 设置按钮内文字大小 */
+  border: none;
+  /* 去掉默认边框 */
+  cursor: pointer;
+  /* 鼠标悬停显示手型指针 */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 半透明黑色背景，透明度0.3 */
+  color: white;
+  /* 白色文字 */
+  opacity: 0.7;
+  /* 整体半透明效果 */
+  transition: opacity 0.3s ease;
+  /* 添加过渡效果，鼠标悬停时改变透明度更平滑 */
+}
+
+button:hover {
+  opacity: 1;
+  /* 鼠标悬停时变为完全不透明 */
+}
+
+#prevButton {
+  left: 10px;
+  top: 230px;
+  /* 垂直方向上处于中间位置 */
+}
+
+#nextButton {
+  right: 10px;
+  top: 230px;
+  /* 垂直方向上处于中间位置 */
+}
+
+.box h3 {
+  padding: 10px;
+  margin-left: 50px;
+}
+
+
+  .box p {
+    padding: 10px;
+    text-align: justify;
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* 这里先设置为 4 行，方便观察效果，后续会调整为 11 行 */
+    overflow: hidden;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: box;
+    box-orient: vertical;
+  }
+
+
+.mxqy-content {
+  display: none;
+}
+
+.mxqy-content:first-child {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+
+  .inner-box2 {
+    display: flex;
+    flex-direction: column;
+    /* 将子元素设置为上下排列 */
+  }
+
+  /* 如果这两个盒子有各自的样式，并且在响应式下需要进一步微调边距等属性，可以继续添加以下样式 */
+  .box-a {
+    margin-bottom: 10px;
+    /* 可以按需调整这个值，设置盒子a下方的间距 */
+  }
+
+  .box-b {
+    margin-top: 0;
+    /* 去除原本可能有的上边距等 */
+  }
+
+  #loge,
+  .zjbs h3 {
+    margin-left: 100px;
+    text-decoration: none;
+  }
+
+  #imageBox {
+    width: 100%;
+    height: 20%;
+  }
+
+  .bigbox,
+  .qyjs {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    /* 初始设置为列布局，先保证上下排列 */
+  }
+
+  .inner-box,
+  .qdpm,
+  .mrt,
+  .box3,
+  .mxqy,
+  .fk {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  #mrt {
+    width: 80%;
+    margin: auto;
+    height: 600px;
+  }
+
+  .dropdown {
+    margin: auto;
+  }
+
+  .box-zhiding li {
+    width: 9px;
+    height: 9px;
+    margin-right: 7px;
+  }
+
+  .box-right,
+  .box-left {
+    width: 30px;
+    height: 60px;
+    top: 200px;
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  .history h2 {
+    padding: 10px;
+    margin-left: 30px;
+  }
+
+  .history p {
+    padding: 8px;
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  /* .mxqy{
+    width: 100%;
+    margin: auto;
+    margin-left: 10px;
+  } */
+  .dropdown {
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #loge {
+    margin-left: 80px;
+    text-decoration: none;
+  }
+
+  .zjbs h3 {
+    margin-left: 60px;
+  }
+
+  #imageBox {
+    width: 100%;
+    height: 20%;
+  }
+
+  .bigbox,
+  .qyjs,
+  .bigbox2,
+  .inner-box2 {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    /* 初始设置为列布局，先保证上下排列 */
+  }
+
+  .inner-box,
+  .qdpm,
+  .mrt,
+  .box3,
+  .mxqy,
+  .fk,
+  #mrt {
+    width: 90%;
+    margin: 1px auto;
+
+  }
+
+  #mrt {
+    height: 500px;
+  }
+
+  .qdpm,
+  .mxqy {
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+  }
+
+  .dropdown {
+    margin: auto;
+  }
+
+  .box-zhiding li {
+    width: 5px;
+    height: 5px;
+    margin-right: 3px;
+  }
+
+  .box-right,
+  .box-left {
+    width: 25px;
+    height: 50px;
+    top: 120px;
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  /* .mxqy{
+    width: 100%;
+    margin: auto;
+    margin-left: 0;
+  } */
+}
+
+@media screen and (max-width: 991px) {
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+    /* 将子元素设置为上下排列 */
+  }
+
+  /* 如果这两个盒子有各自的样式，并且在响应式下需要进一步微调边距等属性，可以继续添加以下样式 */
+  .box-a {
+    margin-bottom: 10px;
+    /* 可以按需调整这个值，设置盒子a下方的间距 */
+  }
+
+  .box-b {
+    margin-top: 0;
+    /* 去除原本可能有的上边距等 */
+  }
+
+  /* 选择包含球员介绍按钮和球队排名的共同父容器，如果有的话，这里假设它们都在类名为 one 的容器内 */
+  .one {
+    display: flex;
+    flex-direction: column;
+    /* 设置为垂直排列方向 */
+  }
+
+  /* 如果球员介绍按钮所在的dropdown类元素有额外的样式影响布局，可按需调整 */
+  .qyjs.dropdown {
+    width: 100%;
+    /* 可以让按钮宽度占满一行，根据实际情况看是否需要 */
+  }
+
+  /* 对于球队排名部分的样式调整，比如占满宽度等 */
+
+  .dropdown {
+    margin-bottom: 250px;
+  }
+}
+
+/*  */
