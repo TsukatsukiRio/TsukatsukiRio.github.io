@@ -273,7 +273,6 @@ body {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.5s ease;
 }
 
 .tit {
@@ -456,23 +455,6 @@ footer {
   position: relative;
   top: -100px;
 }
-
-#backToTop {
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  background: #dcdcdc;
-  line-height: 50px;
-  text-align: center;
-  position: fixed;
-  bottom: -50px;
-  right: 20px;
-  color: #fff;
-  font-weight: bolder;
-  transition: 0.5s ease;
-  border-radius: 50%;
-}
-
 /* 适配显示器大小 */
 @media screen and (max-width:1199px) {
   body {
