@@ -1,0 +1,317 @@
+  [
+    {
+      "id": 1,
+      "workInfo": {
+        "workName": "火影忍者",
+        "English":"NARUTO",
+        "director": "岸本齐史",
+        "genre": "热血战斗 · 奇幻冒险 · 经典动画",
+        "language": "日语",
+        "releaseTime": "2005"
+      },
+      "actors": [
+        {
+          "imgSrc": "img\\anben.jpg",
+          "imgAlt": "作者",
+          "actorName": "岸本齐史"
+        },
+        {
+          "imgSrc": "img\\mr.jpg",
+          "imgAlt": "演员",
+          "actorName": "漩涡鸣人"
+        },
+        {
+          "imgSrc": "img\\zz.jpg",
+          "imgAlt": "演员",
+          "actorName": "宇智波佐助"
+        },
+        {
+          "imgSrc": "img\\ying.jpg",
+          "imgAlt": "演员",
+          "actorName": "原野樱"
+        },
+        {
+          "imgSrc": "img\\kkx.jpg",
+          "imgAlt": "演员",
+          "actorName": "旗木卡卡西"
+        },
+        {
+          "imgSrc": "img\\OIP.jpg",
+          "imgAlt": "演员",
+          "actorName": "自来也"
+        },
+        {
+          "imgSrc": "img\\带土.jpg",
+          "imgAlt": "演员",
+          "actorName": "宇智波带土"
+        },
+        {
+          "imgSrc": "img\\雏田.jpg",
+          "imgAlt": "演员",
+          "actorName": "日向雏田"
+        },
+        {
+          "imgSrc": "img\\you.jpg",
+          "imgAlt": "演员",
+          "actorName": "宇智波鼬"
+        },
+        {
+          "imgSrc": "img\\ban.jpeg",
+          "imgAlt": "演员",
+          "actorName": "宇智波斑"
+        },
+        {
+          "imgSrc": "img\\纲手.jpeg",
+          "imgAlt": "演员",
+          "actorName": "演员名字"
+        },
+        {
+          "imgSrc": "img\\011.jpg",
+          "imgAlt": "演员",
+          "actorName": "演员名字"
+        }
+      ],
+      "test": {
+        "boxs": {
+          "image": "img\\hyrz.jpg"
+        },
+        "qer": [
+          {
+            "image": "img\\jfz.jpg"},
+          {
+            "image": "img\\rzzl.jpg"},
+          {
+            "image": "img\\合影1.jpg"},
+          {
+            "image": "img\\合影.jpg"}  
+        ]
+      },
+      "introduce":{
+      "section":"《火影忍者》（日语：NARUTO -ナルト-），通常简称为/火影/，为日本漫画家岸本齐史创作的少年漫画，讲述忍者世界里围绕着身为对手的漩涡鸣人和宇智波佐助另两人，与其他角色的故事经历。漫画自1999年开始在日本集英社旗下的少年漫画杂志《周刊少年Jump》上连载。2002年，由日本动画工作室Studio Pierrot根据漫画原作所改编制作的电视动画版《火影忍者》开始在日本东京电视台播出。2004年，漫画进而改编成电影。2006年，漩涡鸣人入选美国《新闻周刊》日文版于10月18日发行的特集中选出的“全世界最受尊敬的100位日本人"
+      }
+    },
+    {
+      "id": 2,
+      "workInfo": {
+        "workName": "七龙珠",
+        "English":"DRAGON BALL",
+        "director": "鸟山明",
+        "genre": "热血战斗 · 奇幻冒险 · 经典动画",
+        "language": "日语",
+        "releaseTime": "1984"
+      },
+      "actors": [
+        {
+          "imgSrc": "img\\DRAGON BALL\\nsm.png",
+          "imgAlt": "作者",
+          "actorName": "鸟山明"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\wk.png",
+          "imgAlt": "演员",
+          "actorName": "孙悟空"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\beijita.png",
+          "imgAlt": "演员",
+          "actorName": "贝吉塔"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\swf.png",
+          "imgAlt": "演员",
+          "actorName": "孙悟饭"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\18.png",
+          "imgAlt": "演员",
+          "actorName": "人造人18号"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\buma.png",
+          "imgAlt": "演员",
+          "actorName": "布玛"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\wulong.png",
+          "imgAlt": "演员",
+          "actorName": "乌龙"
+        },
+        {
+          "imgSrc": "img\\DRAGON BALL\\bike.png",
+          "imgAlt": "演员",
+          "actorName": "比克"
+        }
+      ],
+      "test": {
+        "boxs": {
+          "image": "img\\DRAGON BALL\\fm.jpg"
+        },
+        "qer": [
+          {
+            "image": "img\\DRAGON BALL\\bj.jpg"
+          },
+          {
+            "image": "img\\DRAGON BALL\\bj1.jpg"},
+          {
+            "image": "img\\DRAGON BALL\\bj2.jpg"},
+          {
+            "image": "img\\DRAGON BALL\\bj3.jpg"}  
+        ]
+      },
+      "introduce":{
+        "section":"《龙珠》（日文：ドラゴンボール、英文：DRAGON BALL）是东映动画制作的“龙珠系列”第一部动画TV，改编于著名漫画家鸟山明的同名作品（1-194篇） [1]。该作于1986年2月26日—1989年4月19日在富士电视台放送，共153话。该剧讲述了很久很久以前曾流传着七颗龙珠可以召唤出神龙实现愿望的传说。住在深山中的小悟空本领高强，偶然的机会他随时尚少女布尔玛走出大山，四处寻找传说中的龙珠。期间经历了各种各样的艰险和奇遇，也惹出一连串爆笑的故事。"
+        }
+    },
+    {
+      "id":3,
+      "workInfo": {
+        "workName": "海贼王",
+        "English":"ONE PIECE",
+        "director": "尾田荣一郎",
+        "genre": "热血战斗 · 奇幻冒险 · 经典动画",
+        "language": "日语",
+        "releaseTime": "2005"
+      },
+      "actors": [
+          {
+            "imgSrc": "img\\one piece\\weit.jpg",
+            "imgAlt": "作者",
+            "actorName": "尾田荣一郎"
+          },
+          {
+            "imgSrc": "img\\one piece\\lufei.jpg",
+            "imgAlt": "演员",
+            "actorName": "蒙奇D路飞"
+          },
+          {
+            "imgSrc": "img\\one piece\\so.jpg",
+            "imgAlt": "演员",
+            "actorName": "罗罗亚·佐罗"
+          },
+          {
+            "imgSrc": "img\\one piece\\namei.jpg",
+            "imgAlt": "演员",
+            "actorName": "娜美"
+          },
+          {
+            "imgSrc": "img\\one piece\\山治.jpeg",
+            "imgAlt": "演员",
+            "actorName": "山治"
+          },
+          {
+            "imgSrc": "img\\one piece\\白胡子.jpg",
+            "imgAlt": "演员",
+            "actorName": "白胡子"
+          },
+          {
+            "imgSrc": "img\\one piece\\ais.jpg",
+            "imgAlt": "演员",
+            "actorName": "艾斯"
+          },
+          {
+            "imgSrc": "img\\one piece\\wusp.png",
+            "imgAlt": "演员",
+            "actorName": "乌索普"
+          },
+          {
+            "imgSrc": "img\\one piece\\qiaoba.jpg",
+            "imgAlt": "演员",
+            "actorName": "乔巴"
+          },
+          {
+            "imgSrc": "img\\one piece\\nvdi.jpeg",
+            "imgAlt": "演员",
+            "actorName": "女帝"
+          }
+      ],
+      "test": {
+        "boxs": {
+          "image": "img\\hzw.jpg"
+          },
+          "qer": [
+            {
+              "image": "img\\one piece\\hzw1.jpg"},
+            {
+              "image": "img\\one piece\\hzw2.jpg"},
+            {
+              "image": "img\\one piece\\hzw3.jpg"},
+            {
+              "image": "img\\one piece\\hzw4.jpg"} ]
+      },
+      "introduce":{
+        "section":"作品以虚构的“大海贼时代”为故事舞台，描述海贼蒙奇·D·路飞想要得到“ONE PIECE”（一个大秘宝）（ワンピース（ひとつなぎの大秘宝））和成为“海贼王”为梦想而出海向“伟大的航道”航行的海洋冒险故事。《ONE PIECE》（日语：ONE PIECE／ワンピース；中文译名：海贼王、航海王），是日本漫画家尾田荣一郎创作的少年漫画，自1997年7月22日起在集英社旗下杂志《周刊少年Jump》连载[1]、同年12月发行第一册单行本，至今已出版107册单行本。并在漫画杂志《周刊少年Jump》中长期占据人气榜的第一名，单行本在日本以外，亦已有30多个国家翻译版本发行。另外也衍生出诸多衍生作品，包括同名的电视动画、电影、小说和电子游戏等周边媒体产品。"
+        }
+    },
+    {
+      "id":4,
+      "workInfo": {
+        "workName": "怪奇物语",
+        "English":"STERANGER THINGS",
+        "director": "菲奇兄弟",
+        "genre": "悬疑-恐惧",
+        "language": "英语",
+        "releaseTime": "2014"
+      },
+      "actors": [
+          {
+            "imgSrc": "img\\Stranger Things\\duffer.jpg",
+            "imgAlt": "作者",
+            "actorName": "达菲兄弟"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\winona.jpg",
+            "imgAlt": "演员",
+            "actorName": "薇诺娜·瑞德"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\david.jpg",
+            "imgAlt": "演员",
+            "actorName": "大卫·哈伯"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\finn.jpg",
+            "imgAlt": "演员",
+            "actorName": "芬恩·伍法德"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\11.jpg",
+            "imgAlt": "演员",
+            "actorName": "米莉·博比·布朗"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\Gaten_Matarazzo.jpg",
+            "imgAlt": "演员",
+            "actorName": "诺亚·施纳普"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\Noah_Schnapp_by_Gage_Skidmore.jpg",
+            "imgAlt": "演员",
+            "actorName": "娜塔莉亚·戴尔"
+          },
+          {
+            "imgSrc": "img\\Stranger Things\\CharlieHeaton.jpg",
+            "imgAlt": "演员",
+            "actorName": "查理·希顿"
+          }
+        ],
+        "test": {
+          
+            "boxs": {
+              "image": "img\\Stranger Things\\fm.jpg"
+              },
+              "qer": [
+                {
+                  "image": "img\\Stranger Things\\bj1.jpeg"},
+                {
+                  "image": "img\\Stranger Things\\bj2.jpeg"},
+                {
+                  "image": "img\\Stranger Things\\bj3.jpeg"},
+                {
+                  "image": "img\\Stranger Things\\bj4.jpg"} 
+              ]
+    },
+    "introduce":{
+      "section":"怪奇物语》（英语：Stranger Things）是一部由达菲兄弟创作的美国科幻恐怖剧集，于2016年7月15日在Netflix首播[4]。截至2022年，本剧共播出四季。2022年2月，官方宣布续订第五季，同时也是最后一季。故事发生在1980年代的印地安纳州的霍金斯镇，讲述通往“颠倒世界”的传送门经一次儿童实验开启，自此颠倒世界的事物便逐渐蔓延至整座小镇。本剧无论在剧情、演出与配乐方面都向80年代的经典电影及剧集致敬，如史蒂文·斯皮尔伯格、约翰·卡本特、斯蒂芬·金和乔治·卢卡斯等[5]，因而本剧播出后获得了极高的评价。"
+      }
+  }
+  ]

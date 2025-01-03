@@ -1,0 +1,42 @@
+[
+  {
+    "imgSrc": "img\\Stranger Things\\duffer.jpg",
+    "imgAlt": "作者",
+    "actorName": "达菲兄弟"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\winona.jpg",
+    "imgAlt": "演员",
+    "actorName": "薇诺娜·瑞德"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\david.jpg",
+    "imgAlt": "演员",
+    "actorName": "大卫·哈伯"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\finn.jpg",
+    "imgAlt": "演员",
+    "actorName": "芬恩·伍法德"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\11.jpg",
+    "imgAlt": "演员",
+    "actorName": "米莉·博比·布朗"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\Gaten_Matarazzo.jpg",
+    "imgAlt": "演员",
+    "actorName": "诺亚·施纳普"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\Noah_Schnapp_by_Gage_Skidmore.jpg",
+    "imgAlt": "演员",
+    "actorName": "娜塔莉亚·戴尔"
+  },
+  {
+    "imgSrc": "img\\Stranger Things\\CharlieHeaton.jpg",
+    "imgAlt": "演员",
+    "actorName": "查理·希顿"
+  }
+]

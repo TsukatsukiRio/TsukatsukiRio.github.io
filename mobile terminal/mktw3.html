@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Image Interaction</title>
+  <style>
+    /* 为big元素设置样式，可根据实际需求调整，这里简单设置了基本样式和初始隐藏 */
+  .big {
+      width: 400px;
+      height: 400px;
+      border: 1px solid gray;
+      margin-top: 20px;
+      display: none;
+    }
+    img{
+      width: 30%;
+    }
+  </style> 
+</head>
+
+<body>
+  <img src="img\ying.jpg" alt="图片1" id="ai">
+  <img src="img\OIP.jpg" alt="图片2" id="ai">
+  <div class="big">
+    <img id="targetImg" src="" alt="目标图片">
+  </div>
+  <script>
+    const targetImg = document.getElementById('targetImg');
+    const bigElement = document.querySelector('.big');
+    const img = document.getElementById('ai');
+
+    if (img) {
+      img.addEventListener('click', function () {
+        const clickedImgSrc = img.src;
+        targetImg.src = clickedImgSrc;
+        bigElement.style.display = 'block';
+      });
+    }
+
+    bigElement.addEventListener("click", function (event) {
+      if (event.target === bigElement) {
+        bigElement.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

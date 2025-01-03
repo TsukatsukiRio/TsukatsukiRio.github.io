@@ -1,0 +1,42 @@
+{ 
+  "dev": [
+      {
+          "link": "mktw.html?param=1",
+          "content": "火影忍者"
+      },
+      {
+          "link": "mktw.html?param=3",
+          "content": "海贼王"
+      },
+      {
+          "link": "mktw.html?param=2",
+          "content": "七龙珠"
+      },
+      {
+          "link": "mktw3.html?param=4",
+          "content": "怪奇物语"
+      }
+  ],
+  "items": [
+    {
+      "link": "mktw.html?param=1",
+      "image": "img\\hyrz.jpg",
+      "name": "火影忍者"
+    },
+    {
+      "link":"mktw.html?param=3",
+      "image": "img\\hzw.jpg",  
+      "name": "海贼王" 
+    },
+    {
+      "link":"mktw.html?param=2",
+      "image": "img\\DRAGON BALL\\fm.jpg",  
+      "name": "七龙珠" 
+    },
+    {
+      "link": "mktw.html?param=4",
+      "image": "img\\Stranger Things\\fm.jpg",  
+      "name": "怪奇物语" 
+    }
+  ]
+}

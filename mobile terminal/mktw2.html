@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>显示隐藏文本示例</title>
+  <style>
+    /* 原有的CSS样式，用于控制初始显示效果，超出部分隐藏并显示省略号 */
+    #ok {
+      height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 定义段落内容 -->
+  <p id="ok">
+    这里是一段示例文字内容，你可以自行替换为你真正想展示的长文本内容。这段文字用于演示初始显示部分内容，点击按钮后展示全部的效果。它可以是一篇文章、一段介绍或者其他较长的文本描述，通过这样的交互方式来避免页面一开始就显得过于冗长，同时又能让用户按需查看全部内容。
+  </p>
+  <!-- 定义按钮，绑定点击事件函数 -->
+  <button onclick="showFullText(this)">显示全部</button>
+
+  <script>
+    // 定义函数，点击按钮时移除相关限制样式，显示全部文字，并隐藏按钮
+    function showFullText(btn) {
+      document.getElementById('ok').style.whiteSpace = 'normal';
+      document.getElementById('ok').style.overflow = 'visible';
+      document.getElementById('ok').style.textOverflow = 'clip';
+      document.getElementById('ok').style.height = 'auto';
+      // 使用传入的按钮元素，将其隐藏，通过设置样式的display属性为none来实现隐藏
+      btn.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

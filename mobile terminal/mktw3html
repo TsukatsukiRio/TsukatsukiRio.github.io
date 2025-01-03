@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七龙珠</title>
+  <link rel="stylesheet" href="css\mktw.css">
+</head>
+<body>
+  <header>
+   <div class="top1">
+   <b>我的收藏</b>
+   <button onclick="goBack()">返回上一页</button>
+   </div>
+  </header>
+  <section>
+    <div class="box1">
+  <div class="boxs">
+   </div>
+    <div class="zl">
+      <ul class="zpmz">
+        <li>作品名字:<span></span></li>
+        <li>DRAGON BALL</li>
+        <li>导演：<span></span></li>
+        <li>类型:<span></span></li>
+        <li>语言：<span></span></li>
+        <li>上映时间：<span></span></li>
+      </ul>
+    </div>
+    </div>
+    <div class="box2">
+      <h3>作品简介</h3>
+      <div class="js">
+       <p data-clamp="3" data-content="作品以虚构的“大海贼时代”为故事舞台，描述海贼蒙奇·D·路飞想要得到“ONE PIECE”（一个大秘宝）（ワンピース（ひとつなぎの大秘宝））和成为“海贼王”为梦想而出海向“伟大的航道”航行的海洋冒险故事。《ONE PIECE》（日语：ONE PIECE／ワンピース；中文译名：海贼王、航海王），是日本漫画家尾田荣一郎创作的少年漫画，自1997年7月22日起在集英社旗下杂志《周刊少年Jump》连载[1]、同年12月发行第一册单行本，至今已出版107册单行本。并在漫画杂志《周刊少年Jump》中长期占据人气榜的第一名，单行本在日本以外，亦已有30多个国家翻译版本发行。另外也衍生出诸多衍生作品，包括同名的电视动画、电影、小说和电子游戏等周边媒体产品。">　
+        作品以虚构的“大海贼时代”为故事舞台，描述海贼蒙奇·D·路飞想要得到“ONE PIECE”（一个大秘宝）（ワンピース（ひとつなぎの大秘宝））和成为“海贼王”为梦想而出海向“伟大的航道”航行的海洋冒险故事......
+       </p>
+       <a class="expand" href="javascript:;" style="float:right;">展开</a>
+      </div>
+    </div>
+    <div class="box3">
+      <h3>演职人员</h3>
+      <div class="yy">
+        <ul class="na">
+        </ul>
+      </div>
+    </div>
+    <div class="jz">
+      <h3>剧照/预告</h3>
+      <div class="jz1">
+      <div class="qer">
+        <img src="img\DRAGON BALL\bj.jpg">
+        <img src="img\DRAGON BALL\bj1.jpg">
+        <img src="img\DRAGON BALL\bj2.jpg">
+        <img src="img\DRAGON BALL\bj3.jpg">
+      </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>    
+  </section>
+  <script>
+    // 获取所有带有data-clamp属性的p元素，这里假设页面中只有这一处需要此功能，如果有多个需适当调整选择逻辑
+    const clampedParagraphs = document.querySelectorAll('p[data-clamp]');
+    
+    // 遍历每个这样的p元素
+    clampedParagraphs.forEach((paragraph) => {
+        const originalText = paragraph.getAttribute('data-content');
+        const currentText = paragraph.textContent;
+        const isTruncated = currentText.length < originalText.length;
+        const expandLink = paragraph.nextElementSibling;
+    
+        if (isTruncated && expandLink && expandLink.classList.contains('expand')) {
+            expandLink.addEventListener('click', function () {
+                paragraph.textContent = originalText;
+                expandLink.style.display = 'none';
+            });
+        }
+    });
+    function goBack() {
+      window.location.href = document.referrer;
+    }
+
+
+    </script>
+    <script src="js/script3.js"></script>
+</body>
+</html>

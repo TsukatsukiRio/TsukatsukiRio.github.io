@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works Display</title>
+  <style>
+    /* 整体书架（容器）样式 */
+    #bookShelf {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    /* 单个作品卡片样式 */
+  .item {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      width: calc(33.33% - 20px); /* 每列占三分之一宽度，减去间隔宽度 */
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+  .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+  .item h3 {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bookShelf"></div>
+  <script>
+    function handleData(data) {
+      console.log(JSON.stringify(data));
+    }
+
+    fetch('js/js.json')
+   .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not OK');
+        }
+        return response.json();
+      })
+   .then(data => {
+        const bookShelf = document.getElementById('bookShelf');
+        // 遍历数据里的每个作品项
+        data.items.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.classList.add('item');
+
+          const img = document.createElement('img');
+          img.src = item.image;
+
+          const name = document.createElement('h3');
+          name.textContent = item.name;
+
+          // 创建一个链接元素包裹整个作品卡片（如果有链接的话实现点击跳转整个卡片）
+          const linkElement = document.createElement('a');
+          if (item.link) {
+            linkElement.href = item.link;
+            linkElement.target = "_blank"; // 新窗口打开链接，可根据需求修改打开方式
+            // 将作品卡片元素添加到链接元素里面
+            linkElement.appendChild(itemDiv);
+          } else {
+            // 如果没有链接，直接使用作品卡片元素
+            linkElement = itemDiv;
+          }
+
+          // 将图片和标题元素添加到当前作品的div元素中
+          itemDiv.appendChild(img);
+          itemDiv.appendChild(name);
+
+          // 将构建好的作品元素（含链接或不含链接）添加到书架元素中
+          bookShelf.appendChild(linkElement);
+        });
+      })
+   .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取图片src并赋值示例</title>
+    <style>
+        /* 为.big类名的div设置一些样式，初始设置为隐藏，并添加过渡动画效果 */
+        img{
+          width: 30%;}
+       .big {
+            display: none;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: lightgray;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        /* 当.big类名的div显示时，设置正常的透明度和缩放比例 */
+       .big.show {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img\ying.jpg" alt="图片1" onclick="handleClick(this)">
+    <img src="img\zz.jpg" alt="图片2" onclick="handleClick(this)">
+    
+    <div class="big">
+      <img class="targetImg" src="" alt="目标图片">
+    </div>
+    <script>
+        function handleClick(clickedImg) {
+            const targetImg = document.querySelector('.targetImg');
+            targetImg.src = clickedImg.src;
+
+            const bigDiv = document.querySelector('.big');
+            // 给.big类名的div添加show类名，触发显示的过渡动画效果
+            bigDiv.classList.add('show');
+        }
+
+        // 获取.big类名的div元素
+        const bigDiv = document.querySelector('.big');
+        bigDiv.addEventListener('click', function (event) {
+            // 判断点击的目标是否是.big类名的div本身，如果是则隐藏它
+            if (event.target === bigDiv) {
+                // 移除show类名，触发隐藏的过渡动画效果
+                bigDiv.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
