@@ -1,0 +1,309 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // 尝试从localStorage读取数据
+    const storedData = localStorage.getItem('contactsData');
+    let data;
+    if (storedData) {
+        data = JSON.parse(storedData);
+    } else {
+        // 如果本地没有数据，再去获取远程JSON数据（保持原有逻辑）
+        fetch('js/index.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.json();
+            })
+            .then(fetchedData => {
+                data = fetchedData;
+                // 存储到localStorage，方便后续使用
+                localStorage.setItem('contactsData', JSON.stringify(fetchedData));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    // 渲染联系人列表（无论数据来自本地还是远程，渲染逻辑一致）
+    const contactsContainer = document.getElementById('contactsContainer');
+    data.users.forEach(contact => {
+        const contactItem = document.createElement('div');
+        contactItem.classList.add('contact-item');
+
+        const contactAvatar = document.createElement('div');
+        contactAvatar.classList.add('contact-avatar');
+        contactAvatar.textContent = contact.avatar;
+        contactItem.appendChild(contactAvatar);
+
+        const contactInfo = document.createElement('div');
+        contactInfo.classList.add('contact-info');
+
+        const contactName = document.createElement('div');
+        contactName.classList.add('contact-name');
+        contactName.textContent = contact.name;
+        contactInfo.appendChild(contactName);
+
+        contactItem.appendChild(contactInfo);
+
+        const contactActions = document.createElement('div');
+        contactActions.classList.add('contact-actions');
+
+        const editButton = document.createElement('button');
+        editButton.textContent = '编辑';
+        editButton.classList.add('edit-btn');
+        contactActions.appendChild(editButton);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '删除';
+        deleteButton.classList.add('delete-btn');
+        contactActions.appendChild(deleteButton);
+
+        contactItem.appendChild(contactActions);
+
+        contactsContainer.appendChild(contactItem);
+    });
+    const xingjinbox = document.querySelectorAll('.add');
+    const tancuangbox = document.querySelector('.augment');
+    const they = document.querySelector('.not-btn');
+    const confirmAddBtn = document.querySelector('.yes-btn');
+    xingjinbox.forEach(xingjinbox => {
+        xingjinbox.addEventListener('click', function () {
+            tancuangbox.style.display = 'flex';
+        });
+    });
+
+    they.addEventListener('click', function () {
+        tancuangbox.style.display = 'none';
+    });
+
+    confirmAddBtn.addEventListener('click', function () {
+        const newUserName = document.getElementById('beizuu').value;
+        const newAvatar = document.getElementById('username').value;
+        // 获取当前存储的数据
+        const storedData = localStorage.getItem('contactsData');
+        let data = JSON.parse(storedData);
+        // 创建新的联系人对象
+        const newContact = {
+            "name": newUserName,
+            "avatar": newAvatar
+        };
+        // 添加到数据数组中
+        data.users.push(newContact);
+        // 更新localStorage
+        localStorage.setItem('contactsData', JSON.stringify(data));
+        // 可以在这里重新渲染列表（简单的刷新页面展示新数据，也可以优化为局部更新列表）
+        location.reload();
+    });修改一些条件1.username未输入不添加新元素直接进入  they.addEventListener('click', function () {
+        tancuangbox.style.display = 'none';
+    });
+    // const xingjinbox = document.querySelectorAll('.add');
+    //     const tancuangbox = document.querySelector('.augment');
+    //     const they = document.querySelector('.not-btn');
+    //     const confirmAddBtn = document.querySelector('.yes-btn');
+
+    //     xingjinbox.forEach(xingjinbox => {
+    //         xingjinbox.addEventListener('click', function () {
+    //             tancuangbox.style.display = 'flex';
+    //         });
+    //     });
+
+    //     they.addEventListener('click', function () {
+    //         tancuangbox.style.display = 'none';
+    //     });
+
+    //     confirmAddBtn.addEventListener('click', function () {
+    //         const newUserName = document.getElementById('username').value;
+    //         const newAvatar = document.getElementById('beizuu').value;
+    //         // 获取当前存储的数据
+    //         const storedData = localStorage.getItem('contactsData');
+    //         let data;
+    //         if (storedData) {
+    //             data = JSON.parse(storedData);
+    //         } else {
+    //             data = { users: [] };
+    //         }
+    //         // 按照条件判断处理新的联系人信息
+    //         if (newUserName === '') {
+    //             // 如果用户名未输入，直接关闭弹窗，不进行添加操作
+    //             tancuangbox.style.display = 'none';
+    //             return;
+    //         }
+    //         let nameToAdd = newUserName;
+    //         if (newAvatar.length > 0 && (newAvatar[0].toLowerCase() === 'avatar')) {
+    //             nameToAdd = `${newUserName} (${newAvatar})`;
+    //         }
+    //         // 创建新的联系人对象
+    //         const newContact = {
+    //             "name": nameToAdd,
+    //             "avatar": newAvatar
+    //         };
+    //         // 添加到数据数组中
+    //         data.users.push(newContact);
+    //         // 更新localStorage
+    //         localStorage.setItem('contactsData', JSON.stringify(data));
+    //         // 可以在这里重新渲染列表（简单的刷新页面展示新数据，也可以优化为局部更新列表）
+    //         location.reload();
+    //     });
+ 
+const editButtons = document.querySelectorAll('.edit-btn');
+// 获取弹窗元素
+const popup = document.querySelector('.augment');
+// 获取取消按钮元素（修正选择器为类名选择器，匹配到正确的取消按钮）
+const cancelButton = document.querySelector('.not-btn');
+const confirmEditBtn = document.querySelector('.yes-btn');
+
+// 循环给每个编辑按钮添加点击事件监听器
+editButtons.forEach(editButton => {
+    editButton.addEventListener('click', function () {
+        popup.style.display = 'flex'; // 显示弹窗
+    });
+});
+
+// 给取消按钮添加点击事件监听器
+cancelButton.addEventListener('click', function () {
+    popup.style.display = 'none'; // 隐藏弹窗
+});
+
+// 编辑确定按钮点击事件
+confirmEditBtn.addEventListener('click', function () {
+    const editedUserName = document.getElementById('beizuu').value;
+    const editedAvatar = document.getElementById('username').value;
+    // 获取当前存储的数据
+    const storedData = localStorage.getItem('contactsData');
+    let data = JSON.parse(storedData);
+    // 假设这里可以获取到正在编辑的联系人的索引（可以通过在点击编辑按钮时设置自定义属性等方式记录索引）
+    const editedIndex = 0; // 这里需要替换为实际获取到的索引
+    data.users[editedIndex].name = editedUserName;
+    data.users[editedIndex].avatar = editedAvatar;
+    // 更新localStorage
+    localStorage.setItem('contactsData', JSON.stringify(data));
+    // 重新渲染列表（同样可以优化为局部更新）
+    location.reload();
+});
+   // const scbox = document.querySelectorAll('.delete-btn');
+    // const cancelbox = document.querySelector('.qx1');
+    // const nobox = document.querySelector('.qx-btn');
+    // const confirmDeleteBtn = document.querySelector('.scqd');
+    
+    // scbox.forEach(scbox => {
+    //     scbox.addEventListener('click', function () {
+    //         cancelbox.style.display = 'flex'; // 显示弹窗
+    //     });
+    // });
+    
+    // nobox.addEventListener('click', function () {
+    //     cancelbox.style.display = 'none'; //
+    // });
+    
+    // // 删除确定按钮点击事件
+    // confirmDeleteBtn.addEventListener('click', function () {
+    //     // 获取当前存储的数据
+    //     const storedData = localStorage.getItem('contactsData');
+    //     let data = JSON.parse(storedData);
+    //     // 假设这里可以获取到正在删除的联系人的索引（可以通过在点击删除按钮时设置自定义属性等方式记录索引）
+    //     const deletedIndex = 0; // 这里需要替换为实际获取到的索引
+    //     data.users.splice(deletedIndex, 1);
+    //     // 更新localStorage
+    //     localStorage.setItem('contactsData', JSON.stringify(data));
+    //     // 重新渲染列表
+    //     location.reload();
+    // });
+    // 获取所有编辑按钮元素（使用类名选择器，因为可能有多个编辑按钮）
+    })
+
+
+
+
+
+    
+//     const contactsContainer = document.getElementById('contactsContainer');
+//     renderContacts(data);
+
+//     // 新增按钮点击事件
+//     const addButtons = document.querySelectorAll('.add');
+//     const augmentBox = document.querySelector('.augment');
+//     const cancelAddButton = document.querySelector('.not-btn');
+//     addButtons.forEach(button => {
+//         button.addEventListener('click', function () {
+//             augmentBox.style.display = 'flex';
+//         });
+//     });
+//     cancelAddButton.addEventListener('click', function () {
+//         augmentBox.style.display = 'none';
+//     });
+
+//     // 编辑按钮点击事件
+//     const editButtons = document.querySelectorAll('.edit-btn');
+//     const editPopup = document.querySelector('.augment');
+//     const editCancelButton = document.querySelector('.not-btn');
+//     editButtons.forEach(editButton => {
+//         editButton.addEventListener('click', function () {
+//             editPopup.style.display = 'flex';
+//         });
+//     });
+//     editCancelButton.addEventListener('click', function () {
+//         editPopup.style.display = 'none';
+//     });
+
+//     // 删除按钮点击事件
+//     const deleteButtons = document.querySelectorAll('.delete-btn');
+//     const deletePopup = document.querySelector('.qx1');
+//     const deleteCancelButton = document.querySelector('.qx-btn');
+//     deleteButtons.forEach(deleteButton => {
+//         deleteButton.addEventListener('click', function () {
+//             deletePopup.style.display = 'flex';
+//         });
+//     });
+//     deleteCancelButton.addEventListener('click', function () {
+//         deletePopup.style.display = 'none';
+//     });
+// });
+
+
+   const editButtons = document.querySelectorAll('.edit-btn');
+        const editPopup = document.querySelector('.augment');
+        const editCancelButton = document.querySelector('.not-btn');
+        const beijibox = document.querySelector('.yes-btn');
+        editButtons.forEach(editButton => {
+            editButton.addEventListener('click', function () {
+                editPopup.style.display = 'flex';
+            });
+        });
+        editCancelButton.addEventListener('click', function () {
+            editPopup.style.display = 'none';
+        });
+        beijibox.addEventListener('click', function () {
+            const nxgaiUserName = document.getElementById('username').value;
+            const newAvatar = document.getElementById('beizu').value;
+        
+            if (newUserName === "") {
+                tancuangbox.style.display = 'none';
+                return;
+            } 
+            
+
+               const editButtons = document.querySelectorAll('.edit-btn');
+        const editPopup = document.querySelector('.augment');
+        const editCancelButton = document.querySelector('.not-btn');
+        const beijibox = document.querySelector('.yes-btn');
+        editButtons.forEach(editButton => {
+            editButton.addEventListener('click', function () {
+                editPopup.style.display = 'flex';
+            });
+        });
+        editCancelButton.addEventListener('click', function () {
+            editPopup.style.display = 'none';
+        });
+        beijibox.addEventListener('click', function () {
+            const nxgaiUserName = document.getElementById('username').value;
+            const newAvatar = document.getElementById('beizu').value;
+        
+            if (newUserName === "") {
+                tancuangbox.style.display = 'none';
+                return;
+            } 
+
+                        const editButtons1 = document.querySelectorAll('.edit-btn');
+            editButtons1.forEach((button, index) => {
+              button.addEventListener('click', function () {
+            const contactItem = button.closest('.contact-item');
+            var contactName = contactItem.querySelector('.contact-name').textContent;

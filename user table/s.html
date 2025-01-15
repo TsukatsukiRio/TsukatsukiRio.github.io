@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF - 8">
+  <meta name="viewport" content="width=device-width, initial - scale = 1.0">
+  <title>Search Contacts</title>
+  <style>
+    /* 你的CSS代码 */
+  </style>
+</head>
+
+<body>
+  <input type="search" id="searchInput">
+  <button id="searchButton">Search</button>
+  <div class="contacts - container">
+    <div class="contact - item">
+      <div class="contact - avatar">A</div>
+      <div class="contact - info">
+        <div class="contact - name">Alice</div>
+        <div class="contact - phone">123 - 456 - 7890</div>
+      </div>
+    </div>
+    <div class="contact - item">
+      <div class="contact - avatar">B</div>
+      <div class="contact - info">
+        <div class="contact - name">Bob</div>
+        <div class="contact - phone">098 - 765 - 4321</div>
+      </div>
+    </div>
+    <div class="contact - item">
+      <div class="contact - avatar">C</div>
+      <div class="contact - info">
+        <div class="contact - name">Charlie</div>
+        <div class="contact - phone">555 - 555 - 5555</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const contactItems = Array.from(document.querySelectorAll('.contact - item'));
+
+    searchButton.addEventListener('click', function () {
+      const keyword = searchInput.value.trim().toLowerCase();
+      if (keyword === '') {
+        contactItems.forEach(contactItem => {
+          contactItem.style.display = 'flex';
+        });
+      } else {
+        contactItems.forEach(contactItem => {
+          const contactName = contactItem.querySelector('.contact - name').textContent.toLowerCase();
+          const shouldShow = contactName.includes(keyword);
+          contactItem.style.display = shouldShow? 'flex' : 'none';
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

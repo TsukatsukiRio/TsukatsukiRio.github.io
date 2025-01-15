@@ -334,15 +334,18 @@ body {
 
 .cp {
   margin: auto;
-  width: 1200px;
-  height: 200px;
-
+  width: 1216px;
+  
   display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  /* display: flex; */
 }
 
 .cp1,
 .cp2,
-.cp3 {
+.cp3,
+.cp4 {
   margin: 50px;
   margin-bottom: 10px;
   width: 300px;
@@ -360,6 +363,9 @@ body {
 
 .cp3 {
   background: url(../img/66.png) no-repeat center center;
+}
+.cp4 {
+  background: url(../img/88.png) no-repeat center center;
 }
 
 .ziti {

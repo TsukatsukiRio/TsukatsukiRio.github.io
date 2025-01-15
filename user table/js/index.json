@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id":"1",
+      "name": "张三",
+      "avatar": "老张",
+       "registerTime":"2024-10-1"
+    },
+    {
+      "id":"2",
+      "name": "李四",
+      "avatar": "老李",
+      "registerTime":"2024-10-2"
+    },
+    {
+      "id":"3",
+      "name": "王五",
+      "avatar": "老王",
+      "registerTime":"2024-10-3"
+    },
+    {
+      "id":"4",
+      "name": "老6",
+      "avatar": "",
+      "registerTime":"2024-10-4"
+    }
+  ]}
