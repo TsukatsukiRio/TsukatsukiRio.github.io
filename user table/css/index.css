@@ -56,6 +56,7 @@ button {
   height: 2.125rem;
   border-radius: 0 0.25rem 0.25rem 0;
   cursor: pointer;
+  letter-spacing: 3px;
 }
 
 /*  */
@@ -127,6 +128,7 @@ button {
 .contact-actions {
   display: flex;
   gap: 0.3125rem;
+  margin-right: 15px;
 }
 
 .contact-actions button {
@@ -300,5 +302,7 @@ input[type="xingzhen"] {
     .contacts-container {
       width: 97%;
     }
-
+   .qd{
+    height: 38px;
+   }
   }
