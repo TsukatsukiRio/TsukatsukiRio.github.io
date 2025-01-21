@@ -37,8 +37,8 @@ button {
   /* background-color: #ccc; */
   margin:121px auto;
   /* height: 3000px; */
-  /* justify-content: flex-start; */
-  justify-content: space-between;
+  justify-content: flex-start;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   display: flex;
   width: 90%;
@@ -48,10 +48,11 @@ button {
   width: 22%;
   height: 200px;
   /* background-color: #ccc; */
-  /* margin-left: 10px;
-  margin-right: 16px; */
-  margin: 20px 10px 0 16px;
-  /* display: flex; */
+  /* display: flex
+; */
+  margin-left: 16.5px;
+  margin-right: 16.5px;
+  margin-top: 7px;
 }
 .item img{
   width: 100%;

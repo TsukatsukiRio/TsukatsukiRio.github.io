@@ -1,24 +1,22 @@
 .head {
-  
-  width: 80%;
   margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background:url(../img/001.avif);
-  /* background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height:117px;
+  height:48px;
 }
 .spk{
   display: flex;
-  margin: 154px auto;
+  margin: 80px auto;
   margin-bottom: 25px;
   width: 1060px;
   height: 600px;
@@ -96,5 +94,5 @@
 }
 
 footer{
-  height: 300px;
+  height: 150px;
 }
