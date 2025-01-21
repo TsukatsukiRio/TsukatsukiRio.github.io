@@ -345,7 +345,8 @@ body {
 .cp1,
 .cp2,
 .cp3,
-.cp4 {
+.cp4,
+.cp5 {
   margin: 50px;
   margin-bottom: 10px;
   width: 300px;
@@ -366,6 +367,9 @@ body {
 }
 .cp4 {
   background: url(../img/88.png) no-repeat center center;
+}
+.cp5 {
+  background: url(../img/99.png) no-repeat center center;
 }
 
 .ziti {
